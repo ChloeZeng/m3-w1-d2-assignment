@@ -1,0 +1,29 @@
+{
+  "name": "m3-w1-d2-assignment",
+  "version": "1.0.0",
+  "description": "week1 day3 lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon ./start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChloeZeng/m3-w1-d2-assignment.git"
+  },
+  "author": "chloezeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChloeZeng/m3-w1-d2-assignment/issues"
+  },
+  "homepage": "https://github.com/ChloeZeng/m3-w1-d2-assignment#readme",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "express-validator": "^7.3.0",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

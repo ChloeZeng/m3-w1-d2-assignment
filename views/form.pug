@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  - data = data || {}
+
+  if errors
+    ul(style="color:red")
+      for error in errors
+        li= error.msg
+
+  if message
+    p(style="color:green")= message
+
+  form(action="." method="POST")
+    label(for="name") Name:
+    input(
+      type="text"
+      id="name"
+      name="name"
+      value=data.name
+    )
+
+    label(for="email") Email:
+    input(
+      type="email"
+      id="email"
+      name="email"
+      value=data.email
+    )
+
+    input(type="submit" value="Submit")
