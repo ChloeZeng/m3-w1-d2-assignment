@@ -2,12 +2,17 @@ const express = require('express');
 const router = express.Router();
 const { check, validationResult } = require('express-validator');
 
+
 router.get('/', function (req, res) {
   res.render('form', { title: 'Registration form', data: {} });
 });
 
-router.post(
-  '/',
+/* router.post('/', function (req, res) {
+  console.log(req.body);
+  res.render('form', { title: 'Registration Form', data: req.body });
+}); */
+
+router.post('/',
   [
     check('name')
       .trim()
@@ -35,5 +40,6 @@ router.post(
       message: `Thank you, ${data.name}! We received your email (${data.email}).`
     });
   }
-);
+); 
+
 module.exports = router;

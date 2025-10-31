@@ -5,8 +5,11 @@ const routes = require('./routes/index');
 
 const app = express();
 
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
-app.set('views', './views');
+
+// app.set('view engine', 'pug');
+// app.set('views', './views');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', routes);
